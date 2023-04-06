@@ -1,0 +1,37 @@
+[project]
+name = "sequel-cl"
+version = "0.0.2"
+authors = [
+    { name = "Nikolaos Dimitriadis", email = "nikolaos.dimitriadis@epfl.ch" },
+]
+description = "A Continual Learning Framework for both Jax and PyTorch."
+keywords = ["continual learning", "pytorch", "jax"]
+readme = "README.md"
+requires-python = ">=3.10"
+classifiers = [
+    "Development Status :: 3 - Alpha",
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+]
+dynamic = ["dependencies"]
+
+
+[tool.setuptools.dynamic]
+dependencies = { file = ["requirements.txt"] }
+
+
+[tool.setuptools]
+packages = ["sequel"]
+
+[project.urls]
+repository = "https://github.com/nik-dim/sequel"
+homepage = "https://nik-dim.github.io/sequel-site/"
+documentation = "https://nik-dim.github.io/sequel-site/"
+issue-tracker = "https://github.com/nik-dim/sequel/issues"
+releases = "https://github.com/nik-dim/sequel/releases"
+
+
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"

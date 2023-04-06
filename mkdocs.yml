@@ -1,0 +1,135 @@
+site_name: SequeL
+nav:
+  - Home:
+      - index.md
+      - Installation Guide: installation.md
+      - Reproducibility: reproducibility.md
+      - How to get Started: examples.md
+  - Algorithms:
+      - BaseAlgo: algos/base_algo.md
+      - PyTorch:
+          - PyTorchBaseAlgo: algos/pytorch/base_algo.md
+          - AGEM: algos/pytorch/agem.md
+          - DER: algos/pytorch/der.md
+          - ER: algos/pytorch/er.md
+          - EWC: algos/pytorch/ewc.md
+          - iCaRL: algos/pytorch/icarl.md
+          - Joint: algos/pytorch/joint.md
+          - KCL: algos/pytorch/kcl.md
+          - LaMAML: algos/pytorch/lamaml.md
+          - LFL: algos/pytorch/lfl.md
+          - MAS: algos/pytorch/mas.md
+          - MC-SGD: algos/pytorch/mcsgd.md
+          - SI: algos/pytorch/si.md
+      - JAX:
+          - JaxBaseAlgo: algos/jax/base_algo.md
+          - AGEM: algos/jax/agem.md
+          - DER: algos/jax/der.md
+          - ER: algos/jax/er.md
+          - EWC: algos/jax/ewc.md
+          - iCaRL: algos/jax/icarl.md
+          - Joint: algos/jax/joint.md
+          # - KCL: algos/jax/kcl.md
+          # - LaMAML: algos/jax/lamaml.md
+          - LFL: algos/jax/lfl.md
+          - MAS: algos/jax/mas.md
+          - MC-SGD: algos/jax/mcsgd.md
+          - SI: algos/jax/si.md
+      - Utilities:
+          - state_manager: algos/utils/state_manager.md
+          - callback_hooks: algos/utils/callback_hooks.md
+  - Benchmarks:
+      - base_benchmark: benchmarks/base_benchmark.md
+      - memory: benchmarks/memory.md
+      - MNIST: benchmarks/mnist.md
+      - CIFAR: benchmarks/cifar.md
+      - TinyImageNet: benchmarks/tinyimagenet.md
+      - utils: benchmarks/utils.md
+  - Backbones:
+      - PyTorch:
+          - Base: backbones/pytorch/base.md
+          - MLP: backbones/pytorch/mlp.md
+          - CNN: backbones/pytorch/cnn.md
+          - ResNet: backbones/pytorch/resnet.md
+      - JAX:
+          - Base: backbones/jax/base.md
+          - MLP: backbones/jax/mlp.md
+          - CNN: backbones/jax/cnn.md
+  - Utilities:
+      - Callbacks:
+        - BaseCallback: utils/callbacks/base_callback.md
+        - MetricCallback: utils/callbacks/metric_callback.md
+        - PytorchMetricCallback: utils/callbacks/pytorch_metric_callback.md
+        - JaxMetricCallback: utils/callbacks/jax_metric_callback.md
+        - InputVisualizationCallback: utils/callbacks/input_visualization_callback.md
+        - MemoryCallback: utils/callbacks/memory_callback.md
+      - Loggers: 
+        - BaseLogger: utils/loggers/base_logger.md
+        - CometLogger: utils/loggers/comet_logger.md
+        - ConsoleLogger: utils/loggers/console_logger.md
+        - TensorBoardLogger: utils/loggers/tensorboard_logger.md
+        - WandbLogger: utils/loggers/wandb_logger.md
+
+repo_url: https://github.com/nik-dim/sequel
+repo_name: github.com/nik-dim/sequel
+
+theme:
+  name: "material"
+  palette:
+    - scheme: default
+      media: "(prefers-color-scheme: light)"
+      toggle:
+        icon: material/toggle-switch-off-outline
+        name: Switch to dark mode
+    - scheme: slate
+      media: "(prefers-color-scheme: dark)"
+      toggle:
+        icon: material/toggle-switch
+        name: Switch to light mode
+  features:
+    - content.code.copy
+    - navigation.tabs
+    - navigation.tabs.sticky
+    - navigation.indexes
+    - navigation.sections
+    - git-authors
+
+plugins:
+  - search
+  - autorefs
+  - mkdocstrings:
+      # enabled: !ENV [ENABLE_MKDOCSTRINGS, true]
+      # custom_templates: templates
+      default_handler: python
+      handlers:
+        python:
+          options:
+            show_source: true
+            inherited_members: true
+  # - git-committers:
+  #     repository: nik-dim/cl-repo
+  #     branch: main
+
+      # handlers:
+      #     python:
+      #       selection:
+      #         new_path_syntax: true
+      #           filters:
+      #             # - "!^_"  #
+      #             - "^__*__$"
+      #             - "^__init__$"  # but always include __init__ modules and methods
+
+markdown_extensions:
+  - admonition
+  - pymdownx.details
+  - pymdownx.superfences
+  - pymdownx.tabbed:
+      alternate_style: true
+  - def_list
+  - attr_list
+  - pymdownx.tasklist:
+      custom_checkbox: true
+  - pymdownx.arithmatex
+
+extra_javascript:
+  - https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-MML-AM_CHTML

@@ -1,0 +1,8 @@
+name: cnn
+num_layers: 3
+multiplier: 1
+kernel_size: 3
+activation: "relu"
+stride: 2
+use_maxpool: False
+flatten_output: True

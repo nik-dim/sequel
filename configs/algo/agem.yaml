@@ -1,0 +1,4 @@
+  name: agem
+  per_task_memory_samples: 250
+  memory_batch_size: 256
+  memory_group_by: task

@@ -1,0 +1,11 @@
+name: mcsgd
+per_task_memory_samples: 100
+lmc_policy: offline
+lmc_interpolation: linear
+lmc_lr: 0.05
+lmc_momentum: 0.8
+lmc_batch_size: 64
+lmc_init_position: 0.1
+lmc_line_samples: 10
+lmc_epochs: 1
+

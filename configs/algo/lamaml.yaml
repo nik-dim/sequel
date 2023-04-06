@@ -1,0 +1,9 @@
+name: lamaml
+glances: 5
+n_inner_updates: 5
+second_order: false
+grad_clip_norm: 2.0
+learn_lr: true
+lr_alpha: 0.3
+sync_update: false
+mem_size: 200

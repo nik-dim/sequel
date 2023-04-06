@@ -1,0 +1,32 @@
+# @package _global_
+seed: 0
+expected:
+  avg_acc: 77.42
+comment: Example for LaMAML
+source: original paper
+algo:
+  name: lamaml
+  glances: 5
+  n_inner_updates: 5
+  second_order: false
+  grad_clip_norm: 2.0
+  learn_lr: true
+  lr_alpha: 0.3
+  sync_update: false
+  mem_size: 200
+backbone:
+  type: mlp
+  n_hidden_layers: 2
+  width: 100
+optimizer:
+  type: sgd
+  lr: 0.1
+benchmark:
+  name: rotatedmnist
+  per_task_rotation: 9
+  num_tasks: 20
+  batch_size: 10
+  eval_batch_size: 10000
+  subset: 1000
+training:
+  epochs_per_task: 1

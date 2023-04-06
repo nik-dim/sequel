@@ -1,0 +1,1 @@
+::: sequel.utils.callbacks.base_callback

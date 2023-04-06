@@ -1,0 +1,4 @@
+name: er
+per_task_memory_samples: 100
+memory_batch_size: 100
+memory_group_by: class

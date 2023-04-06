@@ -1,0 +1,13 @@
+name: naive
+lr_deacy: 0.8
+
+
+# StableSGD is the Naive Algorithm with lr_decay and dropout 
+# (defined for backbone) and batch_size for (defined in benchmark)
+# EXAMPLE:
+# backbone:
+#   ...
+#   dropout: 0.5
+
+# benchmark:
+#   batch_size: 10

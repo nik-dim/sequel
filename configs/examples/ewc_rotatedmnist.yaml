@@ -1,0 +1,26 @@
+# @package _global_
+seed: 0
+benchmark:
+  name: rotatedmnist
+  num_tasks: 20
+  per_task_rotation: 9
+  batch_size: 10
+  eval_batch_size: 1024
+comment: Example for EWC
+source: mcsgd paper
+expected:
+  avg_acc: 48.5
+algo:
+  name: ewc
+  ewc_lambda: 1.0
+backbone:
+  type: mlp
+  n_hidden_layers: 2
+  width: 256
+  num_classes: 10
+optimizer:
+  type: sgd
+  lr: 0.01
+  momentum: 0.0
+training:
+  epochs_per_task: 1

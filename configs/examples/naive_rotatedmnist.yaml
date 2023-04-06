@@ -1,0 +1,24 @@
+# @package _global_
+seed: 0
+expected:
+  avg_acc: 46.3
+benchmark:
+  name: rotatedmnist
+  num_tasks: 20
+  per_task_rotation: 10
+  batch_size: 10
+  eval_batch_size: 1024
+algo:
+  name: naive
+paper: MCSGD
+backbone:
+  type: mlp
+  n_hidden_layers: 2
+  width: 256
+  num_classes: 10
+optimizer:
+  type: Sgd
+  lr: 0.01
+  momentum: 0.8
+training:
+  epochs_per_task: 1

@@ -1,0 +1,7 @@
+name: kcl
+core_size: 20
+d_rn_f: 2048 
+kernel_type: rff
+lmd: 0.1
+lr_decay: 0.95
+tau: 0.01

@@ -1,0 +1,36 @@
+# @package _global_
+seed: 0
+expected:
+  avg_acc: 82.3
+benchmark:
+  name: rotatedmnist
+  num_tasks: 20
+  per_task_rotation: 9
+  batch_size: 64
+  eval_batch_size: 1024
+comment: Example for mcsgd
+source: mcsgd paper
+algo:
+  name: mcsgd
+  per_task_memory_samples: 100
+  lmc_policy: offline
+  lmc_interpolation: linear
+  lmc_lr: 0.05
+  lmc_momentum: 0.8
+  lmc_batch_size: 64
+  lmc_init_position: 0.1
+  lmc_line_samples: 10
+  lmc_epochs: 1
+  lr_decay: 0.8
+backbone:
+  type: mlp
+  n_hidden_layers: 2
+  width: 256
+  num_classes: 10
+  dropout: 0.2
+optimizer:
+  type: sgd
+  lr: 0.1
+  momentum: 0.8
+training:
+  epochs_per_task: 1

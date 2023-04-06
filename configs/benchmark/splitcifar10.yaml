@@ -1,0 +1,4 @@
+name: splitcifar10
+num_tasks: 5
+is_cifar100: false
+fixed_class_order:

@@ -1,0 +1,4 @@
+type: mlp
+n_hidden_layers: 2 
+width: 256
+num_classes: 10
