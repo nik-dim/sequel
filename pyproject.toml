@@ -1,6 +1,6 @@
 [project]
-name = "sequel-cl"
-version = "0.0.2"
+name = "sequel-core"
+version = "0.0.1"
 authors = [
     { name = "Nikolaos Dimitriadis", email = "nikolaos.dimitriadis@epfl.ch" },
 ]
